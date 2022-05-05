@@ -1,0 +1,25 @@
+MFA (Multi factor authentication)
+
+Demo on setting up MFA?
+
+Demo on creating a budget?
+
+https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all
+
+IAM
+
+demo on user
+demo on groups
+demo on roles
+
+
+Introduction on cloud computing?
+
+Public/private and multi and hybrid
+
+public : available to general public (AWS, gcp, azure), using 1 public
+multicloud : Multiple-cloud.one part on aws and the other on gcp. using more 1 public cloud
+private: aws outposts and anthos. on premises real cloud product
+hybrid: public and private clouds
+
+
