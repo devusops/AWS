@@ -4,3 +4,6 @@ S3
 * movies, audio,photos, text,large data sets
 * Economical & accessed via cli/ui/api/http
 * objects and buckets
+
+
+* demonstrate the block public access settings, talk about the bucket ARN and go into some detail about permissions on objects and how folders are really objects
