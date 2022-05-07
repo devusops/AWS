@@ -2,6 +2,26 @@ MFA (Multi factor authentication)
 
 Demo on setting up MFA?
 
+***********************************
+What is cloud computing?
+
+* on demand self service, does not require any human interaction.
+* broad network access.
+* resource pooling. mutliple customers are using the stack based on requirement.
+* rapid elasticity. system load increase and decrease based on the demand.
+* measured service. billing are avaiable based on usage.
+
+************************************
+what is public,private,multi and hybrid cloud?
+
+public: cloud environment available for public. 
+private: datacenter is on premises. ex aws outposts, azure stack and anthos
+
+
+what are cloud models?
+
+*********************************************
+
 Demo on creating a budget?
 
 https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all
