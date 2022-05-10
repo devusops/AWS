@@ -6,5 +6,12 @@ S3
 * objects and buckets
 
 
+<<<<<<< HEAD
 * Demonstrate the block public access settings, talk about the bucket ARN and go into some detail about permissions on objects and how folders are really objects
 * Demonstrate bucket policies
+=======
+* demonstrate the block public access settings, talk about the bucket ARN and go into some detail about permissions on objects and how folders are really objects
+* demo on static website hosting?
+* demo on versioning?
+
+>>>>>>> 41ca739bf45a6b3fc9cf8db33ca1c624b2fb3bb4

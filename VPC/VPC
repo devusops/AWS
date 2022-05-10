@@ -1,0 +1,9 @@
+VPC
+*****************
+isolated cloud network
+user defined network
+can be connected to datacenter or existing VPN
+can be peered with another aws vpc
+
+***************************************************
+
