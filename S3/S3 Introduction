@@ -6,4 +6,5 @@ S3
 * objects and buckets
 
 
-* demonstrate the block public access settings, talk about the bucket ARN and go into some detail about permissions on objects and how folders are really objects
+* Demonstrate the block public access settings, talk about the bucket ARN and go into some detail about permissions on objects and how folders are really objects
+* Demonstrate bucket policies
