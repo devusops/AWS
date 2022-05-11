@@ -3,9 +3,12 @@ bootstrapping ec2 instance
 
 demo of installing cloudwatch using user data script.
 
+#!/bin/bash -xe
+exec > >(tee /var/log/user-data.log | logger -t user-data -s 2>/dev/console) 2>1
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/linux/amd64/latest/AmazonCloudWatchAgent.zip
 unzip AmazonCloudWatchAgent.zip
 sudo ./install.sh
+echo "Cloudwatch agent installed"
 
 
 sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-config-wizard
