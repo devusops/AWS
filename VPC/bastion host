@@ -1,0 +1,3 @@
+demo on how to login into instance in private ec2 using bastion host?
+
+https://aws.amazon.com/blogs/security/securely-connect-to-linux-instances-running-in-a-private-amazon-vpc/
