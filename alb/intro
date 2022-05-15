@@ -1,0 +1,3 @@
+Path-based routing is one of the unique features offered by Application Load Balancer.
+Path-based routing is also referred to as URL-based routing.
+The Application load balancer will forward the requests to the specific targets based on the Rules configured in the load balancer.
