@@ -1,0 +1,5 @@
+Network Load Balancer
+The network load balancer (NLB) distributes the traffic based on network variables, such as IP address and destination ports.
+
+NLB is capable of processing traffic and scaling at a much higher rate than the application load balancer.
+
