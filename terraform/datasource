@@ -1,0 +1,8 @@
+Datasources
+• For certain providers (like AWS), terraform provides datasources
+• Datasources provide you with dynamic information
+• A lot of data is available by AWS in a structured format using their API
+• Terraform also exposes this information using data sources
+• Examples:
+• List of AMIs
+• List of availability Zones
