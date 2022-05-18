@@ -1,1 +1,50 @@
+Docker Install
+
+sudo yum install -y docker
+
+Verify if Docker is Installed
+
+docker -v
+Docker version 20.10.13, build a224086
+
+Start the docker service
+
+# systemctl start docker 
+# systemctl status docker
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Wed 2022-05-18 07:37:49 UTC; 9s ago
+     Docs: https://docs.docker.com
+  Process: 3901 ExecStartPre=/usr/libexec/docker/docker-setup-runtimes.sh (code=exited, status=0/SUCCESS)
+  Process: 3900 ExecStartPre=/bin/mkdir -p /run/docker (code=exited, status=0/SUCCESS)
+ Main PID: 3904 (dockerd)
+    Tasks: 7
+   Memory: 26.8M
+   CGroup: /system.slice/docker.service
+           └─3904 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock --default-ulimit nofile=32768:65536
+
+May 18 07:37:49 ip-172-31-13-160.us-west-1.compute.internal dockerd[3904]: time="2022-05-18T07:37:49.362184592Z" level=info msg...rpc
+May 18 07:37:49 ip-172-31-13-160.us-west-1.compute.internal dockerd[3904]: time="2022-05-18T07:37:49.402970927Z" level=warning ...ht"
+May 18 07:37:49 ip-172-31-13-160.us-west-1.compute.internal dockerd[3904]: time="2022-05-18T07:37:49.403442696Z" level=warning ...ce"
+May 18 07:37:49 ip-172-31-13-160.us
+
+Hello world application 
+
+docker container run ubuntu:16.04 /bin/echo 'Hello world'
+
+What happened?
+Let's check what the docker container run command did.
+
+First, we specified the docker binary and the command we wanted to execute, container + run. The container run combination runs containers.
+Next we specified an image: ubuntu:16.04. This is the source of the container we ran. Docker calls this an image. In this case, we used an Ubuntu 16.04 operating system image. When we specify an image, Docker looks first for the image on our Docker host. If it can't find the image, then it downloads the image from the public image registry: Docker Hub.
+Next, we told Docker what command to run inside our new container:
+/bin/echo 'Hello world'
+When our container was launched, Docker created a new Ubuntu 16.04 environment, and then executed the /bin/echo command inside it. We saw the result on the command line:
+Hello world
+Docker containers only run as long as the command we specify is active. So, as soon as the "Hello world" was echoed, the container stopped. It's not running anymore.
+
+We can check if there any running containers using docker container ps:
+
+$ docker container ps
+CONTAINER ID  IMAGE  COMMAND  CREATED  STATUS  PORTS  NAMES
 
