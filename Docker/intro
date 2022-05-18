@@ -1,0 +1,46 @@
+Containers vs Virtual Machines
+Virtual Machines
+A virtual machine (VM) is another way of creating an isolated environment. A VM is effectively an individual computer that lives inside a host machine; multiple VMs can live inside a single host machine. VMs are created by virtualising the host machine’s underlying hardware (processing, memory and disk). The hardware is virtualised and split up, with a piece representing a portion of the underlying physical hardware, which a VM can be run on.
+
+VM diagram attached
+
+
+
+
+As you can see in the figure above, the thing that sits between the VMs and the host is the hypervisor layer. The hypervisor is a piece of software that virtualises the host’s hardware and acts as the broker: managing the virtualised hardware and feeding resources to the VMs.
+
+This virtualisation process brings with it substantial computational overhead. Furthermore, since each VM is basically its own machine, they have their own OS installed, which typically require tens of gigabytes of storage, and which therefore takes time to install, which has to be done every time you want to spin up a new VM.
+
+Containers
+Containers take a different approach to producing isolation: like VMs, containers live on top of a host machine and use its resources, however, instead of virtualising the underlying hardware, they virtualise the host OS. Meaning containers don’t need to have their own OS, making them much more lightweight than VMs, and consequently quicker to spin up.
+
+Containers diagram attched
+
+
+The parallel to the hypervisor layer with containers is the Docker daemon (assuming you’re using Docker), it acts as the broker between the host OS and containers. It comes with less computational overhead than hypervisor software (as depicted by the thinner box in the figure above), again making containers more lightweight compared to VMs.
+
+VMs suffer from duplication: many of the capabilities and features of the guest OS(s) are found in the host OS, so why not just use the host OS? This is what containers aim to do, whilst still providing isolation and decoupling from software in the host machine. With containers, only the things that the app absolutely needs are copied into the container, as opposed to VMs were the whole OS is installed – even the things from the OS that aren’t used by the app.
+
+What containerisation is actually doing under the covers is some clever misdirection whereby a container only gets to see a virtual view of the host OS; a view that only contains the things that have been prescribed for the container – certain things in the file system, for example.
+
+Docker
+Docker is a containerisation platform – it is a toolkit that allows you to build, deploy and manage containerised applications. There are alternative containerisation platforms, such as podman, however, Docker is the leading player in this space. Docker is an open source platform, free to download. There is also Docker Inc, the company that sells the commercial version of Docker. Docker comes with a command line interface (CLI), using which you can do all of the operations that the platform provides.
+
+Docker terminology
+Images: The blueprints of our application which form the basis of containers. These contain all of the configuration settings that define the isolated environment.
+Containers: Are instances of a Docker image and are what run the actual application.
+Docker Daemon: That background service running on the host that listens to API calls (via the Docker client), manages images and building, running and distributing containers. The Deamon is the process that runs in the operating system which the client talks to – playing the role of the broker.
+Docker Client: The command line tool that allows the user to interact with the daemon. There are other forms of clients too.
+Docker Hub: A registry of Docker images containing all available Docker images. A user can have their own registry, from which they can pull images.
+Docker image terminology
+Base and child images
+
+Base images are images that have no parent image – they don’t build on or derive from another image, usually images that represent an operating system (e.g. Ubuntu, busybox).
+Child images are images that build on base images and add additional functionality, most images you’re likely to make will be child images.
+Official and user images – these can both be base and child images
+
+Official images are images that are officially maintained and supported by the people at Docker. These are typically one word long. Examples include python, ubuntu, and hello-world.
+
+User images are images created and shared by people who use Docker. They usually build on base images and add functionality. Typically these are formatted as user/image-name.
+
+
