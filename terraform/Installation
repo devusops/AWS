@@ -1,0 +1,22 @@
+https://www.terraform.io/downloads
+
+Verify Terraform
+
+$ terraform -v
+Terraform v1.1.9
+on darwin_amd64
+
+
+Introduction
+
+Infrastructure as code
+Automation of your Infrastructure
+Keep your infrastructure in a certain state
+
+
+ 2 web instances with 2 vlumes and loadbalancer 
+ suppose if 1 is delete then terraform will create
+ Make your infrastructure auditable
+Ansible, chef helps with installation and configuration 
+
+Terraform automates the infrastructure itself 
