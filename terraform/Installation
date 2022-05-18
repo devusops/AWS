@@ -14,9 +14,10 @@ Automation of your Infrastructure
 Keep your infrastructure in a certain state
 
 
- 2 web instances with 2 vlumes and loadbalancer 
+ 2 web instances with 2 volumes and load balancer
  suppose if 1 is delete then terraform will create
  Make your infrastructure auditable
 Ansible, chef helps with installation and configuration 
 
 Terraform automates the infrastructure itself 
+
