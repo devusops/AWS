@@ -48,3 +48,10 @@ We can check if there any running containers using docker container ps:
 $ docker container ps
 CONTAINER ID  IMAGE  COMMAND  CREATED  STATUS  PORTS  NAMES
 
+
+How to interact with container
+
+docker container run -t -i ubuntu:16.04 /bin/bash
+
+
+
