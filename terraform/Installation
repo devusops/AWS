@@ -20,3 +20,10 @@ Keep your infrastructure in a certain state
 Ansible, chef helps with installation and configuration 
 
 Terraform automates the infrastructure itself 
+
+
+terraform console
+> var.myvar
+"hello world"
+> exit
+
