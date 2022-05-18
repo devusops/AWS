@@ -6,11 +6,6 @@ resource "aws_instance" "example" {
   }
 }
 
-provisioner "file" {
- source = "app.conf"
- destination = "/etc/myapp.conf"
- }
-
 output "ip" {
   value = aws_instance.example.public_ip
 }
