@@ -21,3 +21,12 @@ Ansible, chef helps with installation and configuration
 
 Terraform automates the infrastructure itself 
 
+<<<<<<< HEAD
+=======
+
+terraform console
+> var.myvar
+"hello world"
+> exit
+
+>>>>>>> 3e11537aa8ff8dd8763b6e5742f5e10d0ee21059
