@@ -9,3 +9,14 @@ VOLUME - You can use the VOLUME instruction in a Dockerfile to tell Docker that 
 USER - when root is too mainstream.
 WORKDIR - set the working directory.
 EXPOSE - get your ports right.
+
+Docker file
+
+cd docker
+git clone git@github.com:devusops/AWS.git
+  617  cd AWS/Docker/flask_app
+  630  docker build -t devusops/catnip .
+  631  docker images
+  632  docker run -d -p 8888:5000 devusops/catnip
+  634  docker container ls
+  635  docker port 51cf94f8ae2
